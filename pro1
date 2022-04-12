@@ -22,17 +22,17 @@ printf("Equilateral triangle");
 }
 else if((a!=b)&&(a!=c)&&(b!=c))
 {
-                                  printf("Scalene triangle");
+    printf("Scalene triangle");
 }
-                     else
+     else
 {                             
 printf("Isosceles triangle");
                       }
 }
-           else
-                 {
-                              printf("triangle cannot be formed");
-                 }      
-                getch(); 
-                return 0;
-            }
+  else
+{
+   printf("triangle cannot be formed");
+ }      
+   getch(); 
+   return 0;
+  }
