@@ -1,0 +1,11 @@
+#include<stdio.h>
+#include<conio.h>
+main( )
+{
+ int month[12]={31,28,31,30,31,30,31,31,30,31,30,31};
+ int d,m,y,nd,nm,ny,ndays;
+ clrscr( );
+printf("enter the date,month,year"); scanf("%d%d%d",&d,&m,&y); ndays=month[m-1];
+if(y<=1812 && y>2012)
+{
+printf("Invalid Input Year");
