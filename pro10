@@ -1,0 +1,50 @@
+#include<stdio.h>
+2	#include<conio.h>
+3	int main()
+4	{
+
+  5	Int a[20],n,low,high,mid,key,I;
+ 6	int flag=0;
+ 7	clrscr();
+8	printf("Enter the value of n:\n");
+9	scanf("%d",&n);
+10	if(n>0)
+11	{
+12		printf("Enter %d elements in ASCENDING order\n",n);
+13		for(i=0;i<n;i++)
+14		{
+15		scanf("%d",&a[i]);
+16		}
+17		printf("Enter the key element to be searched\n");
+18		scanf("%d",&key);
+19		low-=0;
+20		high=n-1;
+21	while(low<=high)
+22		{
+23		   mid=(low+high)/2;
+24		   if(a[mid]==key)
+25		{
+26		    flag=1;
+27		     break;
+28	 }
+29		    else if(a[mid]<key)
+30		{
+31	 low=mid+1;
+
+32                   }
+ 33                  else
+ 34                  {
+ 35                   high=mid-1;
+  36	 }
+  37		}
+  38		if(flag==1)
+  39	   printf("Successful   search\n Element   found   at  Location  
+                               %d\n",mid+1);
+   40	           else
+   41		printf(“Key element is not found”);
+   42	   }
+   43		else
+   44		 printf("Wrong input");
+   45		getch();
+   46		return 0; 
+   47     }
