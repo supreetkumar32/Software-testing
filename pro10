@@ -48,3 +48,42 @@
    45		getch();
    46		return 0; 
    47     }
+////////////////////////////////////////////
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
+#include <stdio.h>
+
+int main()
+{
+    int a[10],n,i,j;
+    printf("enter the number of elements");
+    scanf("%d",&n);
+    printf("enter the elements");
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    printf("enter the element to search");
+    int search;
+    scanf("%d",&search);
+    for( j=0;j<n;j++)
+    {
+        if(a[j]==search)
+        {
+            printf("element is found in position  %d",j+1);
+            break;
+        }   
+        
+    }
+    if(j==n)
+     printf("element not found");
+    
+
+    return 0;
+}
