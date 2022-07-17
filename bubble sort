@@ -1,44 +1,39 @@
+/******************************************************************************
+
+                            Online C Compiler.
+                Code, Compile, Run and Debug C program online.
+Write your code in this editor and press "Run" button to compile and execute it.
+
+*******************************************************************************/
+
 #include <stdio.h>
+
+
 int main(){
 
-    int arr[50], num, x, y, temp;    
-
-    printf("Please Enter the Number of Elements you want in the array: ");
-
-    scanf("%d", &num);    
-
-    printf("Please Enter the Value of Elements: ");
-
-    for(x = 0; x < num; x++)
-
-        scanf("%d", &arr[x]);
-
-    for(x = 0; x < num - 1; x++){       
-
-        for(y = 0; y < num - x - 1; y++){          
-
-            if(arr[y] > arr[y + 1]){               
-
-                temp = arr[y];
-
-                arr[y] = arr[y + 1];
-
-                arr[y + 1] = temp;
-
-            }
-
+int a[20];
+printf("enter the number of elements");
+int n;
+scanf("%d",&n);
+printf("enter the elements");
+for(int i=0;i<n;i++){
+    scanf("%d",&a[i]);
+}
+for(int x=0;x<n-1;x++)     //less than n-1
+{
+    for(int y=0;y<n-x-1;y++)   //less than n-x-1
+    {
+        if(a[y]>a[y+1])
+        {
+            int temp=a[y];
+            a[y]=a[y+1];
+            a[y+1]=temp;
         }
-
     }
-
-    printf("Array after implementing bubble sort: ");
-
-    for(x = 0; x < num; x++){
-
-        printf("%d  ", arr[x]);
-
-    }
-
-    return 0;
+}
+printf("after sorting");
+for(int i=0;i<n;i++){
+    printf("%d ",a[i]);
+}
 
 }
